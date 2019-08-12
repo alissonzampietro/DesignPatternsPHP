@@ -1,0 +1,15 @@
+{
+    "name": "alisson/design-patterns-php",
+    "authors": [
+        {
+            "name": "Alisson Zampietro",
+            "email": "alisson.zampietro@gmail.com"
+        }
+    ],
+    "require": {},
+    "autoload": {
+        "psr-4": {
+            "DesignPattern\\": "src/"
+        }
+    }
+}
