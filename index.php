@@ -2,10 +2,10 @@
 
 require_once(__DIR__.'/vendor/autoload.php');
 
-use DesignPattern\Observer\Observer;
-use DesignPattern\AbstractFactory\AbstractFactory;
+$folders = array_filter(scandir('./src/'), function($data) {
+    return $data !== '.' && $data !== '..';
+});
 
-$observer = new Observer();
-$abstract = new AbstractFactory();
-$observer->run();
-$abstract->run();
+array_map(function($folder) {
+    include __DIR__.'/src/'.$folder.'/index.php';
+}, $folders);
